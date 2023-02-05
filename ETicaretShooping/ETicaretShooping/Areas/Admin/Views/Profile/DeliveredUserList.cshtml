@@ -1,0 +1,34 @@
+﻿@model List<Entities.Concrete.Order>
+
+@{
+    ViewData["Title"] = "DeliveredUserList";
+    Layout = "~/Views/Shared/_UIAdminPanelLayout.cshtml";
+    int count = 0;
+}
+
+<h3>Kullanıcının Geçmiş Alışveriş Listesi</h3>
+<hr />
+
+<table class="table table-bordered">
+    <tr>
+        <th>Sıra No</th>
+        <th>Ad Soyad</th>
+        <th>Ürünler</th>
+        <th>Fiyatı</th>
+        <th>Tarih</th>
+        <th>Detaylar</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            @{count = count + 1; }
+            <td>@count</td>
+            <td>@item.AppUserId</td>
+            <td><img src="~/images/productimages/@item.ProductImage" width="50" height="50" ></td>
+            <td>@item.ProductPrice ₺</td>
+            <td>@(((DateTime)item.Date).ToString("dd-MMM-yyyy"))</td>
+            <td><a href="#" class="btn btn-outline-primary">Detaylar</a></td>
+        </tr>
+    }
+</table>

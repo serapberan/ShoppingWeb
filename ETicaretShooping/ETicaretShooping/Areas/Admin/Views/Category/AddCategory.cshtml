@@ -1,0 +1,22 @@
+﻿@model Entities.Concrete.Category
+@{
+    ViewData["Title"] = "AddCategory";
+    Layout = "~/Views/Shared/_UIAdminPanelLayout.cshtml";
+}
+
+
+<h1>Yeni Kategori Oluşturma Sayfası</h1>
+<hr />
+<form method="post">
+    <div class="form-group">
+        @Html.Label("Kategori Adı")
+        <input type="text" asp-for="Name" class="form-control" />
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.Label("Stastus")
+        <input type="text" asp-for="Status" class="form-control" />
+    </div>
+    <br />
+    <button class="btn btn-outline-primary">Ekle</button>
+</form>

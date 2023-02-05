@@ -1,0 +1,12 @@
+C:\Users\serap\source\repos\ETicaretShooping\DTO\bin\Debug\net5.0\DTO.deps.json
+C:\Users\serap\source\repos\ETicaretShooping\DTO\bin\Debug\net5.0\DTO.dll
+C:\Users\serap\source\repos\ETicaretShooping\DTO\bin\Debug\net5.0\ref\DTO.dll
+C:\Users\serap\source\repos\ETicaretShooping\DTO\bin\Debug\net5.0\DTO.pdb
+C:\Users\serap\source\repos\ETicaretShooping\DTO\obj\Debug\net5.0\DTO.csproj.AssemblyReference.cache
+C:\Users\serap\source\repos\ETicaretShooping\DTO\obj\Debug\net5.0\DTO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\serap\source\repos\ETicaretShooping\DTO\obj\Debug\net5.0\DTO.AssemblyInfoInputs.cache
+C:\Users\serap\source\repos\ETicaretShooping\DTO\obj\Debug\net5.0\DTO.AssemblyInfo.cs
+C:\Users\serap\source\repos\ETicaretShooping\DTO\obj\Debug\net5.0\DTO.csproj.CoreCompileInputs.cache
+C:\Users\serap\source\repos\ETicaretShooping\DTO\obj\Debug\net5.0\DTO.dll
+C:\Users\serap\source\repos\ETicaretShooping\DTO\obj\Debug\net5.0\ref\DTO.dll
+C:\Users\serap\source\repos\ETicaretShooping\DTO\obj\Debug\net5.0\DTO.pdb

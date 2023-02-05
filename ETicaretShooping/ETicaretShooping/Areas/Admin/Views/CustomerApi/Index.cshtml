@@ -1,0 +1,36 @@
+﻿@model List<ETicaretShooping.Areas.Admin.Models.CustomerApiViewModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_UIAdminPanelLayout.cshtml";
+}
+
+
+
+<h3>Api Müşteri Listesi</h3>
+<hr />
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Ad</th>
+        <th>Soyad</th>
+        <th>Kullanıcı Adı</th>
+        <th>Mail</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th>@item.CustomerId</th>
+            <td>@item.Name</td>
+            <td>@item.SurName</td>
+            <td>@item.UserName</td>
+            <td>@item.Mail</td>
+          
+            <td><a href="/Admin/CustomerApi/DeleteCustomer/@item.CustomerId/" class="btn btn-outline-warning">Sil</a></td>
+            <td><a href="/Admin/CustomerApi/UpdateCustomer/@item.CustomerId/" class="btn btn-outline-success">Güncelle</a></td>
+        </tr>
+    }
+</table>
+
+<a href="/Admin/CustomerApi/AddCustomer/" class="btn btn-outline-primary">Yeni Müşteri Girişi</a>

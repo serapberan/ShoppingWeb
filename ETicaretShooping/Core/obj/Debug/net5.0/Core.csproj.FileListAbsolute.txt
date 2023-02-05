@@ -1,0 +1,15 @@
+C:\Users\serap\source\repos\ETicaretShooping\Core\bin\Debug\net5.0\Core.deps.json
+C:\Users\serap\source\repos\ETicaretShooping\Core\bin\Debug\net5.0\Core.runtimeconfig.json
+C:\Users\serap\source\repos\ETicaretShooping\Core\bin\Debug\net5.0\Core.runtimeconfig.dev.json
+C:\Users\serap\source\repos\ETicaretShooping\Core\bin\Debug\net5.0\Core.dll
+C:\Users\serap\source\repos\ETicaretShooping\Core\bin\Debug\net5.0\ref\Core.dll
+C:\Users\serap\source\repos\ETicaretShooping\Core\bin\Debug\net5.0\Core.pdb
+C:\Users\serap\source\repos\ETicaretShooping\Core\obj\Debug\net5.0\Core.csproj.AssemblyReference.cache
+C:\Users\serap\source\repos\ETicaretShooping\Core\obj\Debug\net5.0\Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\serap\source\repos\ETicaretShooping\Core\obj\Debug\net5.0\Core.AssemblyInfoInputs.cache
+C:\Users\serap\source\repos\ETicaretShooping\Core\obj\Debug\net5.0\Core.AssemblyInfo.cs
+C:\Users\serap\source\repos\ETicaretShooping\Core\obj\Debug\net5.0\Core.csproj.CoreCompileInputs.cache
+C:\Users\serap\source\repos\ETicaretShooping\Core\obj\Debug\net5.0\Core.dll
+C:\Users\serap\source\repos\ETicaretShooping\Core\obj\Debug\net5.0\ref\Core.dll
+C:\Users\serap\source\repos\ETicaretShooping\Core\obj\Debug\net5.0\Core.pdb
+C:\Users\serap\source\repos\ETicaretShooping\Core\obj\Debug\net5.0\Core.genruntimeconfig.cache

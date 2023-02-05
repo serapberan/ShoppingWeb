@@ -1,0 +1,33 @@
+﻿@model ETicaretShooping.Models.MailConfirmationViewModel
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_UIAdminPanelLayout.cshtml";
+}
+
+
+
+<h3> Mail Gönderme Sayfası</h3>
+<br />
+<hr />
+<form method="post">
+
+    <div class="form-group">
+        @Html.Label("Alıcı Mail Adresi")
+        <input type="text" asp-for="ReceiverMail" class="form-control" />
+    </div>
+    <br />
+
+    <div class="form-group">
+        @Html.Label("Konu Başlığı")
+        <input type="text" asp-for="Subject" class="form-control" />
+    </div>
+    <br />
+
+    <div class="form-group">
+        @Html.Label("Mesaj İçeriği")
+        <textarea cols="30" rows="5" class="form-control" asp-for="Body"></textarea>
+    </div>
+    <br />
+
+    <button  class="btn btn-outline-primary" onclick="return confirm('E-Mail Başarıyla Gönderilmiştir.');">Mail Gönder</button>
+</form>

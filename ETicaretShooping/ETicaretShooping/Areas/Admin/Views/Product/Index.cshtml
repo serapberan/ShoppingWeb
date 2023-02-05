@@ -1,0 +1,50 @@
+﻿@using Entities.Concrete
+@model List<Product>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_UIAdminPanelLayout.cshtml";
+}
+
+<h3>Ürünler</h3>
+<br />
+<a href="/Admin/Product/AddProduct" class="btn btn-outline-primary">Yeni Ürün Oluştur</a>
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>Resim</th>
+        <th>Ürün</th>
+        <th>Kategorisi</th>
+        <th>Fiyat</th>
+        <th>Adet </th>
+        <th>Populer </th>
+        <th>Siteye Git </th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+<tr>
+    <td><img src="~/images/productimages/@item.ImageUrl" width="30" height="30"></td>
+    <td>@item.Name</td>
+    <td>@item.CategoryId</td>
+    <td>@item.Price</td>
+    <td>@item.Stock</td>
+
+    @{ if (item.Popular == true)
+        {
+            <td><a  href="/Admin/Product/ChangeFalse/@item.ProductId" class="btn btn-success">Pasif Yap</a></td>
+        }
+        else
+        {
+            <td><a href="/Admin/Product/ChangeTrue/@item.ProductId" class="btn btn-primary">Aktif Yap</a></td>
+        }
+    }
+
+    <td><a href="/ProductDetail/ProductDetailPage/@item.ProductId" class="btn btn-info">Sitede Gör</a></td>
+    <td><a href="/Admin/Product/DeletProduct/@item.ProductId" class="btn btn-danger">Sil</a></td>
+    <td><a href="/Admin/Product/UpdateProduct/@item.ProductId" class="btn btn-success">Güncelle</a></td>
+</tr>
+    }
+</table>
+
+

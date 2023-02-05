@@ -1,0 +1,21 @@
+﻿@model ETicaretShooping.CQRS.Results.ProductResult.GetByIdProductQueryResult
+@{
+    ViewData["Title"] = "GetByIdProduct";
+    Layout = "~/Views/Shared/_UIAdminPanelLayout.cshtml";
+}
+
+<h4>Ürün Düzenleme Sayfasıt</h4>
+<hr />
+<form method="post">
+    <input type="hidden" asp-for="ProductId" />
+    <label>Ürün Adı</label>
+    <input type="text" asp-for="Name" class="form-control" />
+    <br />
+    <label>Fiyat</label>
+    <input type="text" asp-for="Price" ₺ class="form-control" />
+    <br />
+    <label>Açıklaması</label>
+    <input type="text" asp-for="Description" class="form-control" />
+    <br />
+    <button class="btn btn-outline-success"> Güncelle</button>
+</form>

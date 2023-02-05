@@ -1,0 +1,25 @@
+﻿@model ETicaretShooping.Areas.Admin.Models.CustomerApiViewModel
+@{
+    ViewData["Title"] = "AddCustomer";
+    Layout = "~/Views/Shared/_UIAdminPanelLayout.cshtml";
+}
+
+
+
+<h3>Api ile Müşteri Ekleme</h3>
+<hr />
+<form method="post">
+    <label>Müşterinin Adı</label>
+    <input type="text" class="form-control" asp-for="Name" />
+    <br />
+    <label>Müşterinin Soyadı</label>
+    <input type="text" class="form-control" asp-for="SurName" />
+    <br />
+    <label>Müşterinin Kullanıcı Adı</label>
+    <input type="text" class="form-control" asp-for="UserName" />
+    <br />
+    <label>Ziyaretçi Mail Adresi</label>
+    <input type="text" class="form-control" asp-for="Mail" />
+    <br />
+    <button class="btn btn-outline-primary">Müşteriyi Kaydet</button>
+</form>

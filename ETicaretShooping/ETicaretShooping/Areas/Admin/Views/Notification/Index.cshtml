@@ -1,0 +1,31 @@
+﻿@model List<DTO.DTOs.NotificationDTOs.NotificationListDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_UIAdminPanelLayout.cshtml";
+}
+
+
+<h1>Bildirim Listesi</h1>
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Başlık</th>
+        <th>İçerik</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+        <th>Detaylar</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.NotificationsId</td>
+            <td>@item.Title</td>
+            <td>@item.Content</td>
+            <td><a href="/Admin/Notification/DeleteNotification/@item.NotificationsId" class="btn btn-outline-danger">Sil</a></td>
+            <td><a href="/Admin/Notification/UpdateNotification/@item.NotificationsId" class="btn btn-outline-success">Güncelle</a></td>
+        
+        </tr>
+    }
+</table>
+<a href="/Admin/Notification/AddNotification/" class="btn btn-outline-info">Yeni Duyuru Girişi</a>

@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_UILayout.cshtml";
+}
+
+
+
+@await Component.InvokeAsync("_TrendProductComponent")
+@await Component.InvokeAsync("_DiscountComponent")
+@await Component.InvokeAsync("_ProductComponent")
+@await Component.InvokeAsync("_SubscribeComponent")
+@await Component.InvokeAsync("_ReferansComponent")
+
+

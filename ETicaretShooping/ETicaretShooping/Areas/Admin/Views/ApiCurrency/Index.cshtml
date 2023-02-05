@@ -1,0 +1,33 @@
+﻿@model IEnumerable<ETicaretShooping.Areas.Admin.Models.CurrencyApiViewModel.Exchange_Rates>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_UIAdminPanelLayout.cshtml";
+    int count = 0;
+    
+}
+
+<h3> Günlük Döviz Kur Bilgisi</h3>
+<hr />
+<table class="table table-striped">
+    <tr>
+        <th>Sıra No</th>
+        <th>Tarih</th>
+        <th>Döviz Kur Adı</th>
+        <th>Kur Bilgisi</th>
+
+    </tr>
+
+    @foreach (var item in Model)
+    {
+
+        <tr>
+            @{count = count + 1; }
+            <th>@count</th>
+            <td>@DateTime.Now.ToString("dd-MMM-yyyy")</td>
+            <th>@item.currency</th>
+            <td>@item.exchange_rate_buy</td>
+
+            <td><a href="#" class="btn btn-outline-info">Kur Bilgisi</a></td>
+        </tr>
+    }
+</table>

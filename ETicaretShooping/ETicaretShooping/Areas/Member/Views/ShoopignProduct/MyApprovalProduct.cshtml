@@ -1,0 +1,30 @@
+﻿@using Entities.Concrete
+@model List<Order>
+@{
+    ViewData["Title"] = "MyApprovalProduct";
+    Layout = "~/Views/Shared/_UIUserPanelLayout.cshtml";
+}
+
+<h3 class="text-sm-center bg-success"> Hoşgeldin  @ViewBag.v</h3>
+<br />
+<h5>Hazırlanma Aşamasındaki Sipariş Listen</h5>
+<hr />
+<table class="table table-bordered">
+    <tr>
+        <th>Resmi</th>
+        <th>Sipariş No</th>
+        <th>Sipariş Tarihi</th>
+        <th>Ürün Fiyatı</th>
+        <th>Durum</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td><img src="~/images/productimages/@item.ProductImage" /></td>
+            <td>@item.OrderNo</td>
+            <td>@(((DateTime)item.Date).ToString("dd-MMM-yyyy"))</td>
+            <td>@item.ProductPrice</td>
+            <td>@item.OrderState</td>
+        </tr>
+    }
+</table>

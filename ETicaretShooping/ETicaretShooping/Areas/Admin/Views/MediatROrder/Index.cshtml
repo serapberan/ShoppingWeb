@@ -1,0 +1,40 @@
+﻿@model List<ETicaretShooping.CQRS.Results.OrderResult.GetAllOrderQueryResult>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_UIAdminPanelLayout.cshtml";
+    int count = 0;
+}
+
+
+
+<h4> MediatR Alışveriş Listesi</h4>
+<hr />
+<table class="table table-bordered">
+    <tr>
+        <th>Sıra No</th>
+        <th>Order Id</th>
+        <th>Order No</th>
+        <th>Ürün Id</th>
+        <th>Kullanıcı Id</th>
+        <th>Ürün Fiyatı</th>
+        <th>Adet</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+        {
+            count++;
+            <tr>
+                <td>@count</td>
+                <td>@item.OrderId</td>
+                <td>@item.OrderNo</td>
+                <td>@item.ProductId</td>
+                <td>@item.AppUserId</td>
+                <td>@item.ProductPrice</td>
+                <td>@item.Quantity</td>
+                <td><a href="#" class="btn btn-outline-danger">Sil</a></td>
+                <td><a href="/Admin/MediatROrder/GetOrder/@item.OrderId" class="btn btn-outline-success">Güncelle</a></td>
+            </tr>
+        }
+</table>
+<a href="/Admin/MediatROrder/AddGuide/" class="btn btn-outline-primary">Sipariş Oluştur</a>

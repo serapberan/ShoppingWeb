@@ -1,0 +1,30 @@
+﻿@model ETicaretShooping.Areas.Admin.Models.CustomerApiViewModel
+@{
+    ViewData["Title"] = "UpdateCustomer";
+    Layout = "~/Views/Shared/_UIAdminPanelLayout.cshtml";
+}
+
+
+
+<h3>Api ile Ziyaretçi Güncelleme</h3>
+<hr />
+<form method="post">
+
+    <input type="hidden" asp-for="CustomerId" />
+
+    <label>Ziyaretçi Adı</label>
+    <input type="text" class="form-control" asp-for="Name" />
+    <br />
+    <label>Ziyaretçi Soyadı</label>
+    <input type="text" class="form-control" asp-for="SurName" />
+    <br />
+    <label>Müşterinin Kullanıcı Adı</label>
+    <input type="text" class="form-control" asp-for="UserName" />
+    <br />
+    <label>Ziyaretçi Mail Adresi</label>
+    <input type="text" class="form-control" asp-for="Mail" />
+    <br />
+
+    <br />
+    <button class="btn btn-outline-success">Ziyaretçiyi Güncelle</button>
+</form>

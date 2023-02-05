@@ -1,0 +1,26 @@
+﻿@model ETicaretShooping.CQRS.Commands.ProductCommands.ProductCreateCommand
+@{
+    ViewData["Title"] = "AddProduct";
+    Layout = "~/Views/Shared/_UIAdminPanelLayout.cshtml";
+}
+
+<h3>CQRS ile Ürün Ekle</h3>
+<hr />
+<form method="post">
+    <label>ürün Adı</label>
+    <input type="text" asp-for="Name" class="form-control" />
+    <br />
+    <label>ürün Kategorisi</label>
+    <input type="text" asp-for="CategoryId" class="form-control" />
+    <br />
+    <label>Açıklaması</label>
+    <input type="text" asp-for="Description" class="form-control" />
+    <br />
+    <label>Fiyat</label>
+    <input type="text" asp-for="Price" class="form-control" />
+    <br />
+    <label>Stok</label>
+    <input type="text" asp-for="Stock" class="form-control" />
+    <br />
+    <button class="btn btn-outline-primary"> Kaydet</button>
+</form>

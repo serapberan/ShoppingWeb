@@ -1,0 +1,26 @@
+﻿@model Entities.Concrete.Category
+@{
+    ViewData["Title"] = "CategoryUpdate";
+    Layout = "~/Views/Shared/_UIAdminPanelLayout.cshtml";
+}
+
+<p>
+    <h4 style="color:darkblue"> Kategori Güncelleme Sayfası</h4>
+    <hr class="border-info" />
+
+</p>
+
+<form method="post">
+    <input type="hidden" asp-for="CategoryId" />
+    <div class="form-group">
+        @Html.Label("Kategori Adı")
+        <input type="text" asp-for="Name" class="form-control" />
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.Label("Status")
+        <input type="text" asp-for="Status" class="form-control" />
+    </div>
+    <br />
+    <button class="btn btn-primary">Güncelle</button>
+</form>

@@ -1,0 +1,31 @@
+﻿@model ETicaretShooping.CQRS.Results.OrderResult.GetByIdOrderQyeryResult
+@{
+    ViewData["Title"] = "GetOrder";
+    Layout = "~/Views/Shared/_UIAdminPanelLayout.cshtml";
+}
+
+<h4>Sipariş Düzenleme Sayfasıt</h4>
+<hr />
+<form method="post">
+    <input type="hidden" asp-for="OrderId" />
+    <label>Sipariş Adı</label>
+    <input type="text" asp-for="OrderId" class="form-control" />
+    <br />
+    <label>Sipariş No</label>
+    <input type="text" asp-for="OrderNo" class="form-control" />
+    <br />
+    <label>Ürün Adı</label>
+    <input type="text" asp-for="ProductId" class="form-control" />
+    <br />
+    <label>Kullanııcı Adı</label>
+    <input type="text" asp-for="AppUserId" class="form-control" />
+    <br />
+    <label>Fiyat</label>
+    <input type="text" asp-for="ProductPrice" ₺ class="form-control" />
+    <br />
+    <label>Adet</label>
+    <input type="text" asp-for="Quantity" class="form-control" />
+    <br />
+    <button class="btn btn-outline-success"> Güncelle</button>
+</form>
+

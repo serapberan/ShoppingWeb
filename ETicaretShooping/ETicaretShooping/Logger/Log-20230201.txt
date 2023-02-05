@@ -1,0 +1,8 @@
+2023-02-01T05:16:09.3607703+03:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2023-02-01T05:16:09.3847468+03:00  [INF] Hosting environment: "Development" (c3307c92)
+2023-02-01T05:16:09.3878302+03:00  [INF] Content root path: "C:\Users\serap\source\repos\ETicaretShooping\ETicaretShooping" (b5d60022)
+2023-02-01T05:16:15.6939182+03:00 800002fd-0001-fc00-b63f-84710c7967bb [INF] Index sayfası çağrıldı (1598f5de)
+2023-02-01T05:16:15.6951174+03:00 80000345-0000-f600-b63f-84710c7967bb [INF] Index sayfası çağrıldı (1598f5de)
+2023-02-01T05:21:01.2893422+03:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2023-02-01T05:21:01.3094599+03:00  [INF] Hosting environment: "Development" (c3307c92)
+2023-02-01T05:21:01.3097039+03:00  [INF] Content root path: "C:\Users\serap\source\repos\ETicaretShooping\ETicaretShooping" (b5d60022)

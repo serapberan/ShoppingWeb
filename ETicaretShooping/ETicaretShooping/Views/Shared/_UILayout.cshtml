@@ -1,0 +1,47 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+    @await Html.PartialAsync("/Views/UILayoutPartial/_HeaderPartial.cshtml")
+<body>
+    <!-- Topbar Start -->
+    @await Html.PartialAsync("/Views/UILayoutPartial/_NavbarTopPartial.cshtml")
+    <!-- Topbar End -->
+    <!-- Navbar Start -->
+    <div class="container-fluid mb-5">
+        <div class="row border-top px-xl-5">
+            <!--  <h1>Menü bar start </h1> start-->
+            @await Html.PartialAsync("/Views/UILayoutPartial/_MenuPartial.cshtml")
+            <!--  <h1>Menü bar </h1> end-->
+            <!-- Navbar login kısmı sekmeler start-->
+            @await Html.PartialAsync("/Views/UILayoutPartial/_NavbarDownPartial.cshtml")
+            <!-- Navbar login kısmı sekmeler end-->
+            <!-- iconlar -->
+            @await Html.PartialAsync("/Views/UILayoutPartial/_IconPartial.cshtml")
+        </div>
+    </div>
+    <!-- Navbar End -->
+  
+
+    @RenderBody()
+
+    <!-- Footer Start -->
+    @await Html.PartialAsync("/Views/UILayoutPartial/_FooterPartial.cshtml")
+    <!-- Footer End -->
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+    @await Html.PartialAsync("/Views/UILayoutPartial/_ScriptPartial.cshtml")
+
+</body>
+
+</html>
+
+
+

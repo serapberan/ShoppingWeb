@@ -1,0 +1,37 @@
+﻿@model List<ETicaretShooping.CQRS.Results.ProductResult.GetAllProductQueryResult>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_UIAdminPanelLayout.cshtml";
+    int count = 0;
+}
+
+
+<h3> Ürünler Bilgisi CQRS ile Kullanım</h3>
+<hr style="border-block-color:blue " />
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>Sıra No</th>
+        <th>Ürün Adı</th>
+        <th>Resim</th>
+        <th>Açıklaması</th>
+        <th>Fiyat</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        count++;
+        <tr>
+            <td>@count</td>
+            <td><img src="~/images/productimages/@item.ImageUrl" width="50" height="50"  /></td>
+            <td>@item.Name</td>
+            <td>@item.Description</td>
+            <td>@item.Price ₺</td>
+
+            <td><a href="/Admin/CQRSProduct/DeleteProduct/@item.ProductId" class="btn btn-outline-danger">Sil</a></td>
+            <td><a href="/Admin/CQRSProduct/GetByIdProduct/@item.ProductId" class="btn btn-outline-success">Güncelle</a></td>
+        </tr>
+    }
+</table>
+<a href="/Admin/CQRSProduct/AddProduct/" class="btn btn-primary">Yeni Ürün Ekle</a>

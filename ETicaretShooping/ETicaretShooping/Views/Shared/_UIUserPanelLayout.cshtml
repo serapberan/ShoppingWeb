@@ -1,0 +1,43 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+@await Html.PartialAsync("/Views/UIUserPanelPartial/_HeaderPartial.cshtml")
+<body>
+    <div class="container-scroller">
+        @await Html.PartialAsync("/Views/UIUserPanelPartial/_NavbarUpPartial.cshtml")
+        <div class="container-fluid page-body-wrapper">
+            @await Html.PartialAsync("/Views/UIUserPanelPartial/_MenuPartial.cshtml")
+            <div class="main-panel">
+                <div class="content-wrapper">
+                    @await Html.PartialAsync("/Views/UIUserPanelPartial/_TodayPartial.cshtml")
+                </div>
+                <div class="row">
+                    <div class="col-md-12 stretch-card">
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-title"></p>
+                                <div class="table-responsive">
+                                    @RenderBody()
+                                    @*<table id="recent-purchases-listing" class="table">
+                                    </table>*@
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @await Html.PartialAsync("/Views/UIUserPanelPartial/_FooterPartial.cshtml")
+            </div>
+        </div>
+    </div>
+    @await Html.PartialAsync("/Views/UIUserPanelPartial/_ScriptsPartial.cshtml")
+</body>
+</html>
+
+
+
