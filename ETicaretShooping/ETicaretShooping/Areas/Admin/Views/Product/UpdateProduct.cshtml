@@ -4,55 +4,59 @@
     Layout = "~/Views/Shared/_UIAdminPanelLayout.cshtml";
 }
 
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <p>
+            <h4 style="color:darkblue"> Ürün Güncelleme Sayfası</h4>
+            <hr class="border-info" />
+        </p>
+        <br />
 
-<p>
-    <h4 style="color:darkblue"> Ürün Güncelleme Sayfası</h4>
-    <hr class="border-info" />
-</p>
-<br />
+        <form method="post" enctype="multipart/form-data">
+            @Html.HiddenFor(x => x.ProductId)
 
-<form method="post" enctype="multipart/form-data">
-    @Html.HiddenFor(x=>x.ProductId)
-        <div class="form-group">
-            @Html.Label("Kategorisi")
-            @Html.DropDownListFor(x => x.CategoryId, (List<SelectListItem>)ViewBag.v, new { @class = "form-control" })
-        </div>
-        <div class="form-group">
-            @Html.Label("Ürün adıı")
-            <input type="text" asp-for="Name" class="form-control" />
-        </div>
-        <div class="form-group">
-            @Html.Label("Açıklama")
-            <input type="text" asp-for="Description" class="form-control" />
-        </div>
-        <div class="form-group">
-            @Html.Label("Fiyat")
-            <input type="text" asp-for="Price" class="form-control" />
-        </div>
+            <div class="form-group">
+                @Html.Label("Kategorisi")
+                @Html.DropDownListFor(x => x.CategoryId, (List<SelectListItem>)ViewBag.v, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                @Html.Label("Ürün Adı")
+                <input type="text" asp-for="Name" class="form-control" />
+            </div>
+            <div class="form-group">
+                @Html.Label("Açıklama")
+                <input type="text" asp-for="Description" class="form-control" />
+            </div>
+            <div class="form-group">
+                @Html.Label("Fiyat")
+                <input type="text" asp-for="Price" class="form-control" />
+            </div>
 
-        <div class="form-group">
-            @Html.Label("Stok")
-            <input type="text" asp-for="Stock" class="form-control" />
-        </div>
+            <div class="form-group">
+                @Html.Label("Stok")
+                <input type="text" asp-for="Stock" class="form-control" />
+            </div>
 
-        <div class="form-group ">
+            <div class="form-group ">
 
-            <input type="checkbox" class="form-check-input" asp-for="Approved" /> AppRoved
+                <input type="checkbox" class="form-check-input" asp-for="Approved" /> AppRoved
 
-        </div>
-        <div class="form-group ">
+            </div>
+            <div class="form-group ">
 
-            <input type="checkbox" class="form-check-input" asp-for="Popular" /> Popüler
-        </div>
+                <input type="checkbox" class="form-check-input" asp-for="Popular" /> Popüler
+            </div>
 
-        <div class="form-group ">
+            <div class="form-group ">
 
-            <input type="checkbox" class="form-check-input" asp-for="Status" /> Status
-        </div>
+                <input type="checkbox" class="form-check-input" asp-for="Status" /> Status
+            </div>
 
-        <div class="form-group">
-            <label>Resim Seçiniz</label>
-            <input type="file" asp-for="ImageUrl" />
-        </div>
-        <a href="/Admin/Product/Index" class="btn btn-success">Ürünü Güncelle</a>
-    </form>
+            <div class="form-group">
+                <label>Resim Seçiniz</label>
+                <input type="file" asp-for="ImageUrl" />
+            </div>
+            <a href="/Admin/Product/Index" class="btn btn-success">Ürünü Güncelle</a>
+        </form>
+    </div>
+    </div>

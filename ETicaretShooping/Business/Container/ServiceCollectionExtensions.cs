@@ -4,13 +4,13 @@ using Business.ValidationRules;
 using DataAccess.Abstract;
 using DataAccess.Concrete.EntityFramework;
 using DTO.DTOs.NotificationDTOs;
+using Entities.Concrete;
 using FluentValidation;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
+
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Business.Container
 {
@@ -40,16 +40,37 @@ namespace Business.Container
             services.AddScoped<INotificationsService, NotificationsManager>();
             services.AddScoped<INotificationsDal, EfNotificationsDal>();
 
+            services.AddScoped<ICartService, CartManager>();
+            services.AddScoped<ICartDal, EfCartDal>();
+
             services.AddScoped<IExcelService, ExcelManager>();
 
             services.AddScoped<IPdfService, PdfManager>();
-           
+          
+
         }
 
         public static void MappLoad(this IServiceCollection services)
         {
             services.AddTransient<IValidator<NotificationAddDto>, NotificationValidation>();
-      
+
+        }
+
+
+        public static void LoginCookieLoad(this IServiceCollection services)
+        {
+            services.ConfigureApplicationCookie(options =>
+                {
+                    var cookieBuilder = new CookieBuilder();
+                    cookieBuilder.Name = "EShoppingCookie";
+                    options.LoginPath = "/Login/SignIn";
+                    options.LogoutPath = "/Anasayfa/Index";
+                    options.AccessDeniedPath = "/AuthorizationPage/AccessDenied";
+                    options.Cookie = cookieBuilder;
+                    options.ExpireTimeSpan = TimeSpan.FromDays(60); //60 gün tut
+                options.SlidingExpiration = true;  // 60 gün dolduktan sonra tekrar giriş yaparsa tekrar 60 günü uzat
+
+            });
         }
     }
 }

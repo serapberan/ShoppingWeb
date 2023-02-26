@@ -1,0 +1,57 @@
+﻿@model ETicaretShooping.Areas.Admin.Models.UserEditProfileViewModel 
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_UIUserPanelLayout.cshtml";
+}
+
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+
+
+<h3> Merhaba @User.Identity.Name  Hoşgeldin </h3>
+
+<div class="row">
+
+    <div class="col-md-6 offset-md-3 text-center">
+        @if (String.IsNullOrEmpty(Model.ImageURL))   
+            {
+                <img class="rounded" src="/userimages/defaultpicture.png" />
+            }
+            else
+            {
+                <img class="rounded" src="~/userimages/@Model.ImageURL" />
+            }
+
+        <!--<user-picture class="rounded" style="width:300px" picture-url="@Model.ImageURL"></user-picture>--> @*bu tag helperla yaptık*@
+
+    </div>
+</div>
+
+
+<div class="row">
+
+    <div class="col-md-6 offset-md-3">
+        <h3>Kullanıcı Bilgileri</h3>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th> Adı</th>
+                    <th> SoyAdı</th>
+                    <th>Email</th>
+                    <th>Telefon No</th>
+                    <th>Şehir</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>@Model.Name</td>
+                    <td>@Model.Surname</td>
+                    <td>@Model.Email</td>
+                    <td>@Model.Phonenumber</td>
+                    <td>@Model.City</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>

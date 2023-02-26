@@ -1,5 +1,6 @@
 ﻿using ETicaretShooping.Models;
 using MailKit.Net.Smtp;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MimeKit;
 using System;
@@ -11,6 +12,8 @@ using System.Threading.Tasks;
 namespace ETicaretShooping.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin")]
+    [Route("Admin/[controller]/[action]")]
     public class MailController : Controller
     {
         [HttpGet]

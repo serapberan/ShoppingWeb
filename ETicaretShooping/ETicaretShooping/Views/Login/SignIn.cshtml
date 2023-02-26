@@ -25,6 +25,7 @@
     <link rel="stylesheet" type="text/css" href="~/LoginGiris/css/util.css">
     <link rel="stylesheet" type="text/css" href="~/LoginGiris/css/main.css">
     <!--===============================================================================================-->
+
 </head>
 <body>
 
@@ -35,27 +36,36 @@
                     <img src="~/LoginGiris/images/img-01.png" alt="IMG">
                 </div>
 
+
                 <form class="login100-form validate-form" method="post">
                     <span class="login100-form-title">
-                       Kullanıcı Giriş Sayfası
+                        Kullanıcı Giriş Sayfası
                     </span>
 
-                    <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
-                        <input class="input100" type="text" asp-for="UserName" placeholder="Kullanıcı Adınız">
-                       <span asp-validation-for="UserName"></span>
+                    <div asp-validation-summary="ModelOnly" class="alert alert-info" role="alert">
+                    </div>
+
+                    <div class="wrap-input100 validate-input" data-validate="Email Alanı Boş Geçilemez">
+                        <input class="input100" type="text" asp-for="EMail" placeholder="Email">
+                        <span asp-validation-for="EMail"></span>
                         <span class="focus-input100"></span>
                         <span class="symbol-input100">
                             <i class="fa fa-envelope" aria-hidden="true"></i>
                         </span>
                     </div>
 
-                    <div class="wrap-input100 validate-input" data-validate="Password is required">
+                    <div class="wrap-input100 validate-input" data-validate="Şifre Alanı Boş geçilemez">
                         <input class="input100" type="password" asp-for="Password" placeholder="Password">
                         <span asp-validation-for="Password"></span>
                         <span class="focus-input100"></span>
                         <span class="symbol-input100">
                             <i class="fa fa-lock" aria-hidden="true"></i>
                         </span>
+                    </div>
+
+                    <div class="text-center p-t-12 ">
+                        <input type="checkbox" class="form-check-input " asp-for="RememberMe">
+                        <label class="form-check-label" for="RememberMe" asp-for="RememberMe">Beni Hatırla</label>
                     </div>
 
                     <div class="container-login100-form-btn">
@@ -65,12 +75,14 @@
                     </div>
 
                     <div class="text-center p-t-12">
-                        <span class="txt1">
-                            Forgot
-                        </span>
-                        <a class="txt2" href="#">
-                            Username / Password?
-                        </a>
+                        <a class="btn btn-link" asp-action="ForgetPassword">Şifremi Unuttum?</a>
+                        @*<span class="txt1">
+                                Forgot
+                            </span>
+                            <a class="txt2" href="#">
+                                Username
+                            </a>*@
+
                     </div>
 
                     <div class="text-center p-t-136">

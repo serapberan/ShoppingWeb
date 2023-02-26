@@ -12,7 +12,8 @@ using System.Xml;
 namespace ETicaretShooping.Areas.Admin.Controllers   //Kur bilgileri
 {
     [Area("Admin")]
-    [AllowAnonymous]
+    [Authorize(Roles = "Admin")]
+    [Route("Admin/[controller]/[action]")]
     public class ApiCurrencyController : Controller
     {
         public async Task<IActionResult> Index()
@@ -41,32 +42,6 @@ namespace ETicaretShooping.Areas.Admin.Controllers   //Kur bilgileri
 
         }
 
-    //    [HttpGet]
-    //    public async Task<IActionResult> GetFilterCurrency()
-    //    {
-    //        return View();
-    //    }
 
-    //        [HttpPost]
-    //    public async Task<IActionResult> GetFilterCurrency(string x)
-    //    {
-    //        var client = new HttpClient();
-    //        var request = new HttpRequestMessage
-    //        {
-    //            Method = HttpMethod.Get,
-    //            RequestUri = new Uri($"https://booking-com.p.rapidapi.com/v1/metadata/exchange-rates?locale=en-gb&currency={x}"),
-    //            Headers =
-    //{
-    //    { "X-RapidAPI-Key", "5cc393ee48mshf3e184142efe1acp14b229jsn397efc0cd121" },
-    //    { "X-RapidAPI-Host", "booking-com.p.rapidapi.com" },
-    //},
-    //        };
-    //        using (var response = await client.SendAsync(request))
-    //        {
-    //            response.EnsureSuccessStatusCode();
-    //            var body = await response.Content.ReadAsStringAsync();
-    //            return View(body);
-    //        }
-    //    }
     }
 }

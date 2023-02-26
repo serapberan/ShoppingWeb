@@ -1,22 +1,22 @@
 using Business.Container;
-using Business.ValidationRules;
 using DataAccess.Concrete.EntityFramework;
-using DTO.DTOs.NotificationDTOs;
 using Entities.Concrete;
 using ETicaretShooping.CQRS.Handlers.ProductHandlers;
 using ETicaretShooping.Models;
-using FluentValidation;
+using ETicaretShooping.OptionsModels;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using System;
 using System.IO;
-using System.Xml.Linq;
 
 namespace ETicaretShooping
 {
@@ -32,12 +32,13 @@ namespace ETicaretShooping
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddHttpContextAccessor();
             services.AddScoped<GetAllProductQueryHandler>();
             services.AddScoped<GetByIdProductQueryHandler>();
             services.AddScoped<CreateProductCommandHanler>();
             services.AddScoped<DeleteProductCommandHandler>();
             services.AddScoped<UpdateProductCommandHandler>();
-
+            
             services.AddMediatR(typeof(Startup));
 
             services.AddLogging(x =>
@@ -48,30 +49,42 @@ namespace ETicaretShooping
             });
 
             services.AddDbContext<Context>();  //register iþlemleri için
-            services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<Context>().AddErrorDescriber<CustomerIdentityValidator>();
+            services.AddIdentity<AppUser, AppRole>(options=> 
+            {
+                options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(3);
+                options.Lockout.MaxFailedAccessAttempts = 3; 
+            })
+                .AddEntityFrameworkStores<Context>()
+                .AddDefaultTokenProviders()
+                .AddErrorDescriber<CustomerIdentityValidator>();
+
+            services.Configure<EmailSettings>(Configuration.GetSection("EmailSettings"));
+
+            services.Configure<DataProtectionTokenProviderOptions>(opt =>
+            {
+                opt.TokenLifespan = TimeSpan.FromHours(2); //2 gün geçerli olacak mail reset linki
+            });
+            services.Configure<SecurityStampValidatorOptions>(opt =>   // appuser da securitysatmp alaný 30 dk bir cookileri karþýlaþtýr (2 frklý ekrandan ayný anda girip irinde þifre gibi önemli bilgilerini yeniledi bunu diðer ekrandada görmek için yakalamalýyýz 30 dk verdik )
+            {
+                opt.ValidationInterval = TimeSpan.FromMinutes(30);
+            });
 
             services.AddHttpClient(); //api istekleri karþýlama
 
             services.Load(); //serviceextension businessdan alýyoruz
-
+          
             services.AddAutoMapper(typeof(Startup));
 
             services.MappLoad();
 
             services.AddHttpContextAccessor();
 
-            services.ConfigureApplicationCookie(options =>
-            {
-                options.LoginPath = "/Identity/Account/Login";
-                options.LogoutPath = "/Identity/Account/Logout";
-                options.AccessDeniedPath = "/Identity/Account/AccessDenied";
-            });
+            services.LoginCookieLoad();
 
-
-            
-
+            services.AddSingleton<IFileProvider>(new PhysicalFileProvider(Directory.GetCurrentDirectory()));
+            services.AddHttpContextAccessor();
             services.AddControllersWithViews();
-           
+
             services.AddMvc(config =>    //proje seviyesinde auth olunacak
             {
                 var policy = new AuthorizationPolicyBuilder()
@@ -81,7 +94,7 @@ namespace ETicaretShooping
             });
 
             services.AddMvc();
-
+           
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -117,6 +130,7 @@ namespace ETicaretShooping
                     pattern: "{controller=Home}/{action=Index}/{id?}");
                 
             });
+
 
             app.UseEndpoints(endpoints =>   //Areas için 
             {

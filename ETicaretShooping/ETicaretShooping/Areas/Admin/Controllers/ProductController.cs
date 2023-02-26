@@ -16,9 +16,8 @@ namespace ETicaretShooping.Areas.Admin.Controllers
 {
 
     [Area("Admin")]
-    //[Authorize(Roles = "Admin")]
-     [Route("Admin/Product")]
-    //[Route("Admin/[controller]/[action]")]
+    [Authorize(Roles = "Admin")]
+    [Route("Admin/[controller]/[action]")]
     public class ProductController : Controller
     {
         private readonly IProductService _productService;
@@ -31,8 +30,8 @@ namespace ETicaretShooping.Areas.Admin.Controllers
         }
 
         //................................Ürün Listesi.......................................
-        [Route("")]
-        [Route("Index")]
+        //[Route("")]
+        //[Route("Index")]
         public IActionResult Index()
         {
             var values = _productService.TList();
@@ -40,7 +39,7 @@ namespace ETicaretShooping.Areas.Admin.Controllers
         }
 
         //................................Ürün EKLEME.......................................
-        [Route("AddProduct")]
+        //[Route("AddProduct")]
         [HttpGet]
         public IActionResult AddProduct()
         {
@@ -53,7 +52,7 @@ namespace ETicaretShooping.Areas.Admin.Controllers
                 ViewBag.v = values;
                 return View();
             }
-        [Route("AddProduct")]
+       // [Route("AddProduct")]
         [HttpPost]
         public async Task<IActionResult> AddProduct(Product p)
         {
@@ -74,7 +73,7 @@ namespace ETicaretShooping.Areas.Admin.Controllers
 
 
         //................................ÜRÜN GÜNCELLEME.......................................
-       [Route("UpdateProduct")]
+       // [Route("UpdateProduct")]
         [HttpGet]
         public async Task<IActionResult> UpdateProduct(int id)
         {
@@ -91,12 +90,12 @@ namespace ETicaretShooping.Areas.Admin.Controllers
          
         }
 
-        [Route("UpdateProduct")]
+       // [Route("UpdateProduct")]
         [HttpPost]
         public async Task<IActionResult> UpdateProduct(Product product)
         {
             _productService.TUpdate(product);
-            return RedirectToAction("Index", "Product");
+            return RedirectToAction("Index", "Product", new { area = "Admin" });
         }
 
         [Route("ChangeTrue/{id}")]

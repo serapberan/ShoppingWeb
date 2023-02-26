@@ -73,18 +73,17 @@ namespace ETicaretShooping.Areas.Admin.Controllers
             return View();
         }
 
-        public IActionResult RegisterUserList()
+        public IActionResult RegisterUserList()  //kAYITLI KULLANICILAR
         {
             var values = _appUserService.TList();
             return View(values);
         }
 
 
-        public IActionResult DeliveredUserList(int id)
+        public IActionResult DeliveredUserList(int id) //KULLANICI ALIŞVERİŞ GEÇMİŞLERİ
         {
-            var result = _orderService.TGetById(id);
-            var values = _orderService.GetListMyApprovalProduct(id);
-            return View(values);
+            var result = _orderService.TGetList(x=> x.AppUserId == id);
+            return View(result);
         }
 
     }

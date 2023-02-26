@@ -26,7 +26,7 @@ namespace Business.Concrete
 
         public void TAdd(Cart t)
         {
-            throw new NotImplementedException();
+            _cartDal.Add(t);
         }
 
         public void TDelete(Cart t)

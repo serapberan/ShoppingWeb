@@ -33,6 +33,7 @@
     ".NETCoreApp,Version=v5.0": {
       "ETicaretShooping/1.0.0": {
         "dependencies": {
+          "AspNet.ScriptManager.bootstrap": "5.2.3",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.0",
           "Business": "1.0.0",
           "ClosedXML": "0.100.3",
@@ -51,7 +52,6 @@
           "Microsoft.EntityFrameworkCore.Tools": "5.0.17",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "5.0.2",
           "Serilog.Extensions.Logging.File": "3.0.0",
-          "bootbox": "3.3.0",
           "iTextSharp.LGPLv2.Core": "3.3.0",
           "Microsoft.AspNetCore.Antiforgery": "5.0.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions.Reference": "5.0.0.0",
@@ -332,6 +332,20 @@
           "ETicaretShooping.dll": {}
         }
       },
+      "AspNet.ScriptManager.bootstrap/5.2.3": {
+        "dependencies": {
+          "bootstrap": "5.2.0"
+        },
+        "runtime": {
+          "lib/net45/AspNet.ScriptManager.bootstrap.dll": {
+            "assemblyVersion": "5.2.3.0",
+            "fileVersion": "5.2.3.0"
+          }
+        },
+        "compile": {
+          "lib/net45/AspNet.ScriptManager.bootstrap.dll": {}
+        }
+      },
       "AutoMapper/12.0.0": {
         "dependencies": {
           "Microsoft.CSharp": "4.7.0"
@@ -361,11 +375,7 @@
           "lib/netstandard2.1/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
         }
       },
-      "bootbox/3.3.0": {
-        "dependencies": {
-          "jQuery": "1.8.0"
-        }
-      },
+      "bootstrap/5.2.0": {},
       "BouncyCastle.Cryptography/2.0.0": {
         "runtime": {
           "lib/netstandard2.0/BouncyCastle.Cryptography.dll": {
@@ -560,7 +570,6 @@
           "lib/netstandard2.0/iTextSharp.LGPLv2.Core.dll": {}
         }
       },
-      "jQuery/1.8.0": {},
       "MailKit/3.5.0": {
         "dependencies": {
           "MimeKit": "3.5.0"
@@ -3008,7 +3017,7 @@
       },
       "Business/1.0.0": {
         "dependencies": {
-          "Core": "1.0.0",
+          "AspNet.ScriptManager.bootstrap": "5.2.3",
           "DTO": "1.0.0",
           "DataAccess": "1.0.0",
           "EPPlus": "6.1.2",
@@ -3027,22 +3036,9 @@
           "Business.dll": {}
         }
       },
-      "Core/1.0.0": {
-        "dependencies": {
-          "Microsoft.AspNetCore.Identity": "2.2.0",
-          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "5.0.17",
-          "Microsoft.EntityFrameworkCore": "5.0.17",
-          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.17"
-        },
-        "runtime": {
-          "Core.dll": {}
-        },
-        "compile": {
-          "Core.dll": {}
-        }
-      },
       "DataAccess/1.0.0": {
         "dependencies": {
+          "AspNet.ScriptManager.bootstrap": "5.2.3",
           "Entities": "1.0.0",
           "Microsoft.AspNetCore.Identity": "2.2.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "5.0.17",
@@ -3057,6 +3053,9 @@
         }
       },
       "DTO/1.0.0": {
+        "dependencies": {
+          "AspNet.ScriptManager.bootstrap": "5.2.3"
+        },
         "runtime": {
           "DTO.dll": {}
         },
@@ -3066,6 +3065,7 @@
       },
       "Entities/1.0.0": {
         "dependencies": {
+          "AspNet.ScriptManager.bootstrap": "5.2.3",
           "Microsoft.AspNetCore.Identity": "2.2.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "5.0.17",
           "Microsoft.EntityFrameworkCore": "5.0.17",
@@ -4712,6 +4712,13 @@
       "serviceable": false,
       "sha512": ""
     },
+    "AspNet.ScriptManager.bootstrap/5.2.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zNlCgItXv7d0RRZYyUCXaUlBsKMtxG187pR5DPmrQbg37ksn3dvMfzO/RB/CrpsoELMhqw/FA7RV4yQmSrs6yw==",
+      "path": "aspnet.scriptmanager.bootstrap/5.2.3",
+      "hashPath": "aspnet.scriptmanager.bootstrap.5.2.3.nupkg.sha512"
+    },
     "AutoMapper/12.0.0": {
       "type": "package",
       "serviceable": true,
@@ -4726,12 +4733,12 @@
       "path": "automapper.extensions.microsoft.dependencyinjection/12.0.0",
       "hashPath": "automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512"
     },
-    "bootbox/3.3.0": {
+    "bootstrap/5.2.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-jZERKUF0cUz+XePegaaHuN8QH29wTFplLuzsev0EtA8hziQZMjaN6/nkO9MfPl380d1+ET/QklP6xQZ1GbgulQ==",
-      "path": "bootbox/3.3.0",
-      "hashPath": "bootbox.3.3.0.nupkg.sha512"
+      "sha512": "sha512-YpzkoN4cTzTfmhW4OzPj4QkWXOllC3KR1RCvWgHv+D2bm07HiJQULZ6NYRR9++nOu0iQ6j1W4pszd0xVn6Z8sQ==",
+      "path": "bootstrap/5.2.0",
+      "hashPath": "bootstrap.5.2.0.nupkg.sha512"
     },
     "BouncyCastle.Cryptography/2.0.0": {
       "type": "package",
@@ -4823,13 +4830,6 @@
       "sha512": "sha512-oRaM0ZQTqTe3OJ0O8Wn4Y8nSan2xjYiNRN5TAOLWdvpwaqqEwSb9/2T2d5XNMSCGo4PoXDAdZCY63XdHrIGqaA==",
       "path": "itextsharp.lgplv2.core/3.3.0",
       "hashPath": "itextsharp.lgplv2.core.3.3.0.nupkg.sha512"
-    },
-    "jQuery/1.8.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-laDFQRJrIRHT0Z0GVYklMt3bE0iu0MZFJwHwg21kt3SHb7Bj8TdNiM3K+ZdK1DzB8ZxKy8z7NkJvwMas+dmHBw==",
-      "path": "jquery/1.8.0",
-      "hashPath": "jquery.1.8.0.nupkg.sha512"
     },
     "MailKit/3.5.0": {
       "type": "package",
@@ -6330,11 +6330,6 @@
       "hashPath": "xlparser.1.5.2.nupkg.sha512"
     },
     "Business/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Core/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

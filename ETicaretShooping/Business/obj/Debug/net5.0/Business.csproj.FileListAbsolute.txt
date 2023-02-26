@@ -18,7 +18,5 @@ C:\Users\serap\source\repos\ETicaretShooping\Business\obj\Debug\net5.0\Business.
 C:\Users\serap\source\repos\ETicaretShooping\Business\obj\Debug\net5.0\ref\Business.dll
 C:\Users\serap\source\repos\ETicaretShooping\Business\obj\Debug\net5.0\Business.pdb
 C:\Users\serap\source\repos\ETicaretShooping\Business\obj\Debug\net5.0\Business.genruntimeconfig.cache
-C:\Users\serap\source\repos\ETicaretShooping\Business\bin\Debug\net5.0\Core.dll
 C:\Users\serap\source\repos\ETicaretShooping\Business\bin\Debug\net5.0\DTO.dll
-C:\Users\serap\source\repos\ETicaretShooping\Business\bin\Debug\net5.0\Core.pdb
 C:\Users\serap\source\repos\ETicaretShooping\Business\bin\Debug\net5.0\DTO.pdb

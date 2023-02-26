@@ -55,7 +55,7 @@ using ETicaretShooping.CQRS.Results.ProductResult;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"1bfb49d05d75b4e5672b6c0ee82cd8113988587a", @"/Areas/Admin/Views/ApiCurrency/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"158e3fcc88f78467e0cf74afb61dfcfc5abb9ac8", @"/Areas/Admin/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"da8146dabd5c8fe1c4d516a49306e0b4522b9567", @"/Areas/Admin/Views/_ViewImports.cshtml")]
     public class Areas_Admin_Views_ApiCurrency_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<IEnumerable<ETicaretShooping.Areas.Admin.Models.CurrencyApiViewModel.Exchange_Rates>>
     {
         #pragma warning disable 1998

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -37,9 +38,10 @@ namespace Entities.Concrete
         public DateTime Date { get; set; }
         public string Status { get; set; }
         public int AppUserId { get; set; }
-        public virtual AppUser AppUser { get; set; }
+        [ForeignKey("AppUserId")]
+        public  AppUser AppUser { get; set; }
         public int ProductId { get; set; }
-        public virtual Product Products { get; set; }
+        public  Product Product { get; set; }
         [Required(ErrorMessage = "Boş Geçilemez")]
         public string CardNumber { get; set; }
 
@@ -54,5 +56,7 @@ namespace Entities.Concrete
 
         [Required(ErrorMessage = "Boş Geçilemez")]
         public string Cvc { get; set; }
+       
+     
     }
 }

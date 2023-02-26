@@ -1,0 +1,18 @@
+﻿@model Entities.Concrete.AppRole
+@{
+    ViewData["Title"] = "AddRole";
+    Layout = "~/Views/Shared/_UIAdminPanelLayout.cshtml";
+}
+
+
+
+<h4 class="text-success">Rol Ekleme Sayfası</h4>
+<hr class="border-info" />
+
+<form method="post" >
+   <label>Rol Adı</label>
+    <input type="text" asp-for="Name" class="form-control" />
+    <br />
+
+    <button class="btn btn-primary">Kaydet</button>
+</form>

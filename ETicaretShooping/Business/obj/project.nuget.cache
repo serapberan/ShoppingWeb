@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "G92z7j/ow+8LlsRqOm9QSeQ31sXHwzXCAh1AvKEYeHlSE6iDEpENWG4yhZkt2GKulLdLaLKkwvne7gZsl6VKrA==",
+  "dgSpecHash": "e77cWHmnZd1L9ePs1a6NMVR4ldw9WjfWKZLJhQCCmpZf0dIz0EVrO83n6OcEXInicmw1wqUM9tIi7JHAzByAww==",
   "success": true,
   "projectFilePath": "C:\\Users\\serap\\source\\repos\\ETicaretShooping\\Business\\Business.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\serap\\.nuget\\packages\\aspnet.scriptmanager.bootstrap\\5.2.3\\aspnet.scriptmanager.bootstrap.5.2.3.nupkg.sha512",
+    "C:\\Users\\serap\\.nuget\\packages\\bootstrap\\5.2.0\\bootstrap.5.2.0.nupkg.sha512",
     "C:\\Users\\serap\\.nuget\\packages\\epplus\\6.1.2\\epplus.6.1.2.nupkg.sha512",
     "C:\\Users\\serap\\.nuget\\packages\\epplus.interfaces\\6.1.1\\epplus.interfaces.6.1.1.nupkg.sha512",
     "C:\\Users\\serap\\.nuget\\packages\\epplus.system.drawing\\6.1.1\\epplus.system.drawing.6.1.1.nupkg.sha512",
@@ -143,5 +145,16 @@
     "C:\\Users\\serap\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\serap\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'AspNet.ScriptManager.bootstrap 5.2.3' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0'. This package may not be fully compatible with your project.",
+      "libraryId": "AspNet.ScriptManager.bootstrap",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    }
+  ]
 }

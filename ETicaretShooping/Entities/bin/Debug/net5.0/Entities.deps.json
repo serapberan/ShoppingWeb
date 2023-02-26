@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v5.0": {
       "Entities/1.0.0": {
         "dependencies": {
+          "AspNet.ScriptManager.bootstrap": "5.2.3",
           "Microsoft.AspNetCore.Identity": "2.2.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "5.0.17",
           "Microsoft.EntityFrameworkCore": "5.0.17",
@@ -19,6 +20,18 @@
           "Entities.dll": {}
         }
       },
+      "AspNet.ScriptManager.bootstrap/5.2.3": {
+        "dependencies": {
+          "bootstrap": "5.2.0"
+        },
+        "runtime": {
+          "lib/net45/AspNet.ScriptManager.bootstrap.dll": {
+            "assemblyVersion": "5.2.3.0",
+            "fileVersion": "5.2.3.0"
+          }
+        }
+      },
+      "bootstrap/5.2.0": {},
       "Humanizer.Core/2.8.26": {
         "runtime": {
           "lib/netstandard2.0/Humanizer.dll": {
@@ -1409,6 +1422,20 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "AspNet.ScriptManager.bootstrap/5.2.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zNlCgItXv7d0RRZYyUCXaUlBsKMtxG187pR5DPmrQbg37ksn3dvMfzO/RB/CrpsoELMhqw/FA7RV4yQmSrs6yw==",
+      "path": "aspnet.scriptmanager.bootstrap/5.2.3",
+      "hashPath": "aspnet.scriptmanager.bootstrap.5.2.3.nupkg.sha512"
+    },
+    "bootstrap/5.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-YpzkoN4cTzTfmhW4OzPj4QkWXOllC3KR1RCvWgHv+D2bm07HiJQULZ6NYRR9++nOu0iQ6j1W4pszd0xVn6Z8sQ==",
+      "path": "bootstrap/5.2.0",
+      "hashPath": "bootstrap.5.2.0.nupkg.sha512"
     },
     "Humanizer.Core/2.8.26": {
       "type": "package",

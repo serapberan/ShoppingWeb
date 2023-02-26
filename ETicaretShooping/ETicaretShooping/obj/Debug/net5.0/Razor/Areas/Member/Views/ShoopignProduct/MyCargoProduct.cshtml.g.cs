@@ -34,7 +34,7 @@ using Entities.Concrete;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"34cf208c000a562bd6c3602201fd4bbc0f33118f", @"/Areas/Member/Views/ShoopignProduct/MyCargoProduct.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a6ad6d06a4c71770f3cf2b670355c7b522b12ae9", @"/Areas/Member/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"75ce84a101de21b3e2304fcaba45e4fc00284ab2", @"/Areas/Member/Views/_ViewImports.cshtml")]
     public class Areas_Member_Views_ShoopignProduct_MyCargoProduct : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<List<Order>>
     {
         #line hidden

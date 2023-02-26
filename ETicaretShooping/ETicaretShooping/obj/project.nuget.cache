@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "8aBACQTjDCgpc/6mLiaZSoD4i5eG9PV2FP3YfWQ+8oCf/gKcSQgcicwSlMDqZjYZJFurrNICsNNkzMyBVTebmA==",
+  "dgSpecHash": "SsdnGrcBUQI1XWIisRVB1qlPxraBZPieMq/4xo6r2uRjTw5eH5+u8TkAQPfEPKigPvAcIoMDysBTzUZUPmBltw==",
   "success": true,
   "projectFilePath": "C:\\Users\\serap\\source\\repos\\ETicaretShooping\\ETicaretShooping\\ETicaretShooping.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\serap\\.nuget\\packages\\aspnet.scriptmanager.bootstrap\\5.2.3\\aspnet.scriptmanager.bootstrap.5.2.3.nupkg.sha512",
     "C:\\Users\\serap\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\serap\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
-    "C:\\Users\\serap\\.nuget\\packages\\bootbox\\3.3.0\\bootbox.3.3.0.nupkg.sha512",
+    "C:\\Users\\serap\\.nuget\\packages\\bootstrap\\5.2.0\\bootstrap.5.2.0.nupkg.sha512",
     "C:\\Users\\serap\\.nuget\\packages\\bouncycastle.cryptography\\2.0.0\\bouncycastle.cryptography.2.0.0.nupkg.sha512",
     "C:\\Users\\serap\\.nuget\\packages\\closedxml\\0.100.3\\closedxml.0.100.3.nupkg.sha512",
     "C:\\Users\\serap\\.nuget\\packages\\documentformat.openxml\\2.16.0\\documentformat.openxml.2.16.0.nupkg.sha512",
@@ -20,7 +21,6 @@
     "C:\\Users\\serap\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\serap\\.nuget\\packages\\irony.netcore\\1.0.11\\irony.netcore.1.0.11.nupkg.sha512",
     "C:\\Users\\serap\\.nuget\\packages\\itextsharp.lgplv2.core\\3.3.0\\itextsharp.lgplv2.core.3.3.0.nupkg.sha512",
-    "C:\\Users\\serap\\.nuget\\packages\\jquery\\1.8.0\\jquery.1.8.0.nupkg.sha512",
     "C:\\Users\\serap\\.nuget\\packages\\mailkit\\3.5.0\\mailkit.3.5.0.nupkg.sha512",
     "C:\\Users\\serap\\.nuget\\packages\\mediatr\\11.0.0\\mediatr.11.0.0.nupkg.sha512",
     "C:\\Users\\serap\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
@@ -236,5 +236,16 @@
     "C:\\Users\\serap\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
     "C:\\Users\\serap\\.nuget\\packages\\xlparser\\1.5.2\\xlparser.1.5.2.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'AspNet.ScriptManager.bootstrap 5.2.3' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0'. This package may not be fully compatible with your project.",
+      "libraryId": "AspNet.ScriptManager.bootstrap",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    }
+  ]
 }

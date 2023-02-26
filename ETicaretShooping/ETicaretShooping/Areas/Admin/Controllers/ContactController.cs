@@ -1,4 +1,5 @@
 ﻿using Business.Abstract;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -8,9 +9,11 @@ using System.Threading.Tasks;
 namespace ETicaretShooping.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin")]
+    [Route("Admin/[controller]/[action]")]
     public class ContactController : Controller
     {
-        private readonly IContactService _contactService;
+        private readonly IContactService _contactService;  //siteye gelen mesajlar
 
         public ContactController(IContactService contactService)
         {

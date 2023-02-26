@@ -1,5 +1,6 @@
 ﻿using ETicaretShooping.CQRS.Queries.OrderQueries;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -9,6 +10,8 @@ using System.Threading.Tasks;
 namespace ETicaretShooping.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin")]
+    [Route("Admin/[controller]/[action]")]
     public class MediatROrderController : Controller
     {
         private readonly IMediator _mediator;

@@ -5,8 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AspNet.ScriptManager.bootstrap" Version="5.2.3" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
-    <PackageReference Include="bootbox" Version="3.3.0" />
     <PackageReference Include="ClosedXML" Version="0.100.3" />
     <PackageReference Include="EPPlus" Version="6.1.2" />
     <PackageReference Include="FluentValidation" Version="11.4.0" />
@@ -41,7 +41,6 @@
     <Folder Include="Areas\Member\Data\" />
     <Folder Include="Areas\Member\Models\" />
     <Folder Include="Microsoft\AspNetCore\Identity\" />
-    <Folder Include="wwwroot\userimages\" />
   </ItemGroup>
 
 </Project>

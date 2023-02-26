@@ -79,17 +79,8 @@ namespace Business.Concrete
 
         public void TUpdate(Product t)
         {
-            var result = _productDal.GetById(t.ProductId);
-            result.Name = t.Name;
-            result.Description = t.Description;
-            result.Price = t.Price;
-            result.Stock = t.Stock;
-            result.Popular = t.Popular;
-            result.Approved = t.Approved;
-            result.CategoryId = t.CategoryId;
-            result.Status = t.Status;
-            result.ImageUrl = t.ImageUrl;
-            _productDal.Update(result);
+             _productDal.Update(t);
+          
         }
 
     }

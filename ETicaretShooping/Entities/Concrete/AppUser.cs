@@ -17,6 +17,8 @@ namespace Entities.Concrete
         public string District { get; set; }
         public string ImageURL { get; set; }
         public bool Status { get; set; }
+        public DateTime BirthDate { get; set; }
+        public Gender Gender { get; set; }
         public virtual List<Cart> Carts { get; set; }
         public virtual List<Order> Orders { get; set; }
         public virtual List<Comment> Comments { get; set; }

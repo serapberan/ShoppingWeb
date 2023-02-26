@@ -8,7 +8,7 @@
     ".NETCoreApp,Version=v5.0": {
       "Business/1.0.0": {
         "dependencies": {
-          "Core": "1.0.0",
+          "AspNet.ScriptManager.bootstrap": "5.2.3",
           "DTO": "1.0.0",
           "DataAccess": "1.0.0",
           "EPPlus": "6.1.2",
@@ -26,6 +26,18 @@
           "Business.dll": {}
         }
       },
+      "AspNet.ScriptManager.bootstrap/5.2.3": {
+        "dependencies": {
+          "bootstrap": "5.2.0"
+        },
+        "runtime": {
+          "lib/net45/AspNet.ScriptManager.bootstrap.dll": {
+            "assemblyVersion": "5.2.3.0",
+            "fileVersion": "5.2.3.0"
+          }
+        }
+      },
+      "bootstrap/5.2.0": {},
       "EPPlus/6.1.2": {
         "dependencies": {
           "EPPlus.Interfaces": "6.1.1",
@@ -1275,19 +1287,9 @@
           "System.Xml.XmlDocument": "4.3.0"
         }
       },
-      "Core/1.0.0": {
-        "dependencies": {
-          "Microsoft.AspNetCore.Identity": "2.2.0",
-          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "5.0.17",
-          "Microsoft.EntityFrameworkCore": "5.0.17",
-          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.17"
-        },
-        "runtime": {
-          "Core.dll": {}
-        }
-      },
       "DataAccess/1.0.0": {
         "dependencies": {
+          "AspNet.ScriptManager.bootstrap": "5.2.3",
           "Entities": "1.0.0",
           "Microsoft.AspNetCore.Identity": "2.2.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "5.0.17",
@@ -1299,12 +1301,16 @@
         }
       },
       "DTO/1.0.0": {
+        "dependencies": {
+          "AspNet.ScriptManager.bootstrap": "5.2.3"
+        },
         "runtime": {
           "DTO.dll": {}
         }
       },
       "Entities/1.0.0": {
         "dependencies": {
+          "AspNet.ScriptManager.bootstrap": "5.2.3",
           "Microsoft.AspNetCore.Identity": "2.2.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "5.0.17",
           "Microsoft.EntityFrameworkCore": "5.0.17",
@@ -1321,6 +1327,20 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "AspNet.ScriptManager.bootstrap/5.2.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zNlCgItXv7d0RRZYyUCXaUlBsKMtxG187pR5DPmrQbg37ksn3dvMfzO/RB/CrpsoELMhqw/FA7RV4yQmSrs6yw==",
+      "path": "aspnet.scriptmanager.bootstrap/5.2.3",
+      "hashPath": "aspnet.scriptmanager.bootstrap.5.2.3.nupkg.sha512"
+    },
+    "bootstrap/5.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-YpzkoN4cTzTfmhW4OzPj4QkWXOllC3KR1RCvWgHv+D2bm07HiJQULZ6NYRR9++nOu0iQ6j1W4pszd0xVn6Z8sQ==",
+      "path": "bootstrap/5.2.0",
+      "hashPath": "bootstrap.5.2.0.nupkg.sha512"
     },
     "EPPlus/6.1.2": {
       "type": "package",
@@ -2287,11 +2307,6 @@
       "sha512": "sha512-MYoTCP7EZ98RrANESW05J5ZwskKDoN0AuZ06ZflnowE50LTpbR5yRg3tHckTVm5j/m47stuGgCrCHWePyHS70Q==",
       "path": "system.xml.xmlserializer/4.3.0",
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
-    },
-    "Core/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
     },
     "DataAccess/1.0.0": {
       "type": "project",
